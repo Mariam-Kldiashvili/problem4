@@ -1,13 +1,13 @@
 // problem 1
 // შექმენით ფუნქცია რომელიც დააბრუნებს რიცხვი კენტია თუ ლუწი
 
-// function showMessage(answer) {
-//     if (answer % 2) { console.log("odd") }
-//     else { console.log("even") };
-// }
+function showMessage(answer) {
+    if (answer % 2) { console.log("odd") }
+    else { console.log("even") };
+}
 
-// let answer = Number(prompt("Please enter the Number"));
-// showMessage(answer);
+let answer = Number(prompt("Please enter the Number"));
+showMessage(answer);
 
 
 // problem2
@@ -19,16 +19,16 @@
 
 
 
-// let value;
+let value;
 
-// while (true) {
-//     value = prompt("Enter your name", "");
-//     if (value) break;
-// }
+while (true) {
+    value = prompt("Enter your name", "");
+    if (value) break;
+}
 
-// alert("your name is: " + value);
+alert("your name is: " + value);
 
-// console.log(value);
+console.log(value);
 
 
 
@@ -36,23 +36,23 @@
 // problem 3
 // კონსოლში დაბეჭდეთ 1-100 მდე ყველა ლუწი რიცხვი
 
-// let i = 0;
-// while (i < 100) {
-//     i += 2;
-//     console.log(i)
-// };
+let i = 0;
+while (i < 100) {
+    i += 2;
+    console.log(i)
+};
 
 
 
 // problem4
 // მომხმარებელს მოთხოვეთ რომ შეიყვანოს რიცხვები მანამ სანამ არ შეიყვანს უარყოფით რიცხვს
 
-// let number;
+let number;
 
-// while (true) {
-//    let number = prompt("Enetr the number", "");
-//     if (number<0) break;
-// }
+while (true) {
+   let number = prompt("Enetr the number", "");
+    if (number<0) break;
+}
 
 
 
@@ -66,20 +66,20 @@
 // პარამეტრად მიღებულ მასივში მოძებნის ყველა ელემენტს რომელიც იყოფა 5-ზე უნაშთოდ და ჩაწერს result მასივში.
 
 
-// let numbers = [10, 12, 42, 55, 100, 90, 32, 55];
+let numbers2 = [10, 12, 42, 55, 100, 90, 32, 55];
 
 
-// function arrayNumbers(array) {
-//     let result = [];
-//     for( const elements of array)  {
-//         if (elements%5 == 0){
-//             result.push(elements)
-//         }
-//     }
-//     return result
-// }
+function arrayNumbers(array) {
+    let result = [];
+    for( const elements of array)  {
+        if (elements%5 == 0){
+            result.push(elements)
+        }
+    }
+    return result
+}
 
-// console.log(arrayNumbers(numbers));
+console.log(arrayNumbers(numbers2));
 
 
 
@@ -89,16 +89,16 @@
 // კონსოლში დაბეჭდეთ names მასივში არსებული ყველა ელემენტი, გამოტოვეთ მხოლოდ ნიკა.
 // ლუპის საშუალებით.
 
-// let names = ["Gio", "Luka", "Nika", "Ani", "Eka", "Nini", "Sopo"];
+let names = ["Gio", "Luka", "Nika", "Ani", "Eka", "Nini", "Sopo"];
 
-// for (let i = 0; i < names.length; i++) {
+for (let i = 0; i < names.length; i++) {
 
-//     if (names[i]=="Nika") 
-//         continue;
+    if (names[i]=="Nika") 
+        continue;
     
 
-//     console.log(names[i])
-// };
+    console.log(names[i])
+};
 
 
 
@@ -174,16 +174,46 @@ console.log(usersInfo(users));
 
 // დაწერეთ ფუნქცია რომელიც პარამეტრად მიიღებს მასივს და გადაცემულ მასივში იპოვის და დააბრუნებს ყველაზე დიდ რიცხვს.
 
-// const numbers = [
-//   1, 4, 2, 14, 90, 13, 2, 0, 78, 199, 12, 313, 315, 789, 31, 12, 1, 1, 3467, 90,
-//   70, 34, 43, 189,
-// ];
+
+
+function maxNumber (info){
+    let maxnum = info[0];
+
+    for(const num of info){
+        if (num>maxnum){
+            maxnum = num;
+                    }                    
+    } return maxnum;
+}
+
+const numbers = [
+    1, 4, 2, 14, 90, 13, 2, 0, 78, 199, 12, 313, 315, 789, 31, 12, 1, 1, 3467, 90,
+    70, 34, 43, 189,
+  ];
+
+console.log (maxNumber (numbers))
+
 
 // problem9
 
 // დაწერეთ ფუნქცია რომელიც პარამეტრად მიიღებს მასივს და გადაცემულ მასივში იპოვის და დააბრუნებს ყველაზე პატარა რიცხვს.
 
-// const numbers = [
-//     1, 4, 2, 14, 90, 13, 2, 0, 78, 199, 12, 313, 315, 789, 31, 12, 1, 1, 3467, 90,
-//     70, 34, 43, 189,
-//   ];
+
+  function minNumber (info){
+
+    let minnum = info[0];
+
+    for(const number of info){
+
+        if (number<minnum){
+            minnum = number; }
+        }       
+        return minnum;
+  }
+  
+const numbers1 = [
+    1, 4, 2, 14, 90, 13, 2, 0, 78, 199, 12, 313, 315, 789, 31, 12, 1, 1, 3467, 90,
+    70, 34, 43, 189,
+  ];
+
+  console.log(minNumber(numbers1));
